@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.SaveDetayFragment"
+    android:background="@drawable/black_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollSave">
+    <LinearLayout
+        android:id="@+id/saveLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:id="@+id/saveLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="@dimen/_25sdp">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/saveSayac"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                app:lottie_rawRes="@raw/management"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:lottie_autoPlay="true"/>
+
+            <TextView
+                android:id="@+id/save_author"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="Eser Adı"
+                android:textSize="@dimen/_15ssp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:id="@+id/saveStylish"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_85sdp"
+                    android:background="@drawable/game_stylishs_shape"
+                    android:text="Şık 1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/saveStylish1"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_85sdp"
+                    android:background="@drawable/game_stylishs_shape"
+                    android:text="Şık 1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_5sdp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <TextView
+                    android:id="@+id/saveStylish2"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_85sdp"
+                    android:background="@drawable/game_stylishs_shape"
+                    android:text="Şık 1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/saveStylish3"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_85sdp"
+                    android:background="@drawable/game_stylishs_shape"
+                    android:text="Şık 1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_5sdp"/>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/saveDelete"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:text="Sil"
+                android:background="@drawable/game_button_shape"
+                app:backgroundTint="@null"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/saveProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

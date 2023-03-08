@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ProfilDuzenleFragment"
+    android:background="@drawable/black_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/editLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/giris_yap_shape"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Profil Düzenle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_23ssp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="İsim"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/editLastName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="Soyisim"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/editAuthName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="Kullanıcı Adi"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:inputType="textPersonName"/>
+
+        <LinearLayout
+            android:id="@+id/editCinsiyet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_30sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cinsiyet :"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp"
+                android:paddingStart="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"/>
+            <RadioGroup
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/editErkek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Erkek"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp" />
+                <RadioButton
+                    android:id="@+id/editKadin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kadın"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_marginStart="@dimen/_5sdp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:autoText="true"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="E-Mail"
+            android:paddingStart="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:inputType="textEmailAddress"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/login_button_shape"
+            android:text="Kaydet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</ScrollView>
+    <ProgressBar
+        android:id="@+id/editProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:visibility="invisible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

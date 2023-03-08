@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "747936736485",
+    "project_id": "cepedebiyat",
+    "storage_bucket": "cepedebiyat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747936736485:android:5571874e1e7b642e58e00c",
+        "android_client_info": {
+          "package_name": "com.example.cepedebiyat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747936736485-c2lma5vn9ej948t0gtrfp7nd1b37alch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8nIO-TSXQQga1_9PvCwJmuh-FTufcXHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747936736485-c2lma5vn9ej948t0gtrfp7nd1b37alch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

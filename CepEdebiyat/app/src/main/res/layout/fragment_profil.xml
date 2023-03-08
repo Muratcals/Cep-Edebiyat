@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/black_bg"
+    tools:context=".view.ProfilFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/errorLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Bir sorun oluştu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"/>
+
+        <Button
+            android:id="@+id/refreshButton"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/login_button_shape"
+            android:text="Yenile"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:backgroundTint="@null"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshProfil">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/profilLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@drawable/profil_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <TextView
+                            android:id="@+id/profilName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_33sdp"
+                            android:text="Murat Çalış"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16ssp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Puanım"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/profilScore"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="100"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Doğruluk oranı"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/profilOran"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="100%"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Çözülen soru"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_11ssp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/profilSoru"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="80"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profilImage"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_65sdp"
+                        android:layout_marginBottom="@dimen/_80sdp"
+                        android:src="@drawable/woman"
+                        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:padding="@dimen/_5sdp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/profilDuzenle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:background="@drawable/profil_guncelle_shape"
+                    android:gravity="center_horizontal"
+                    android:text="Profili Düzenle"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/profilSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Kaydedilenler"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_22ssp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/appInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:text="Hakkında"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_22ssp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:text="Uygulamayı Paylaş"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_22ssp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/profilDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:text="Kullanıcıyı Sil"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_22ssp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/profilLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:text="Oturumu Kapat"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_22ssp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_5sdp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <ProgressBar
+        android:id="@+id/profilProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

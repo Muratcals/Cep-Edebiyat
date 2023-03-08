@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.RegisterFragment"
+    android:background="@color/loginBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/loginLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/giris_yap_shape"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Kayıt Ol"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/registerName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="İsim"
+            android:paddingStart="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/registerLastName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="Soyisim"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/registerAuthName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="Kullanıcı Adı"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:inputType="textPersonName"/>
+
+        <LinearLayout
+            android:id="@+id/registerCinsiyet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cinsiyet :"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"/>
+            <RadioGroup
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/registerErkek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Erkek"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+                <RadioButton
+                    android:id="@+id/registerKadin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kadın"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginStart="@dimen/_2sdp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20ssp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="Şifre"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/registerPasswordError1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="1 Büyük harf ve sayi içermelidir."
+            android:textColor="@color/error"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="italic"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/registerPasswordReplay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="Şifre Tekrar"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"/>
+
+        <TextView
+            android:id="@+id/registerPasswordError2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="Şifreleriniz Uyuşmuyor."
+            android:textColor="@color/error"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="italic"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/registerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:background="@drawable/login_textbox_shape"
+            android:hint="Email"
+            android:paddingStart="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="normal"
+            android:inputType="textEmailAddress"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/login_button_shape"
+            android:gravity="center"
+            android:text="Kayıt Ol"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+</ScrollView>
+
+    <ProgressBar
+        android:id="@+id/registerProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

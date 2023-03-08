@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GameActivity"
+    android:background="@color/black">
+
+    <ProgressBar
+        android:id="@+id/gameProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:id="@+id/gameLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/gameSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/save"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_15sdp" />
+        <ImageView
+            android:id="@+id/gameBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_marginStart="@dimen/_5sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oyuna Devam et"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/gameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="30dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gameSayac"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp"
+            app:lottie_rawRes="@raw/countdown"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/game_author"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:text="Eser Adı"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp">
+
+
+            <TextView
+                android:id="@+id/gameStylish"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:background="@drawable/game_stylishs_shape"
+                android:text="Şık 1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"/>
+
+            <TextView
+                android:id="@+id/gameStylish1"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:background="@drawable/game_stylishs_shape"
+                android:text="Şık 2"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/gameStylish2"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:background="@drawable/game_stylishs_shape"
+                android:text="Şık 3"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"/>
+
+            <TextView
+                android:id="@+id/gameStylish3"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:background="@drawable/game_stylishs_shape"
+                android:text="Şık 4"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/nextQuestion"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/game_button_shape"
+            app:backgroundTint="@null"
+            android:text="Sonraki Soru"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:visibility="invisible" />
+    </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

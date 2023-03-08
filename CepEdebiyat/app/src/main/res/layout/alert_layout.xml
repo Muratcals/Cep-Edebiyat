@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/loginTextBoxBackground"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Uyarı"
+        android:background="@color/loginTextBackground"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            app:lottie_rawRes="@raw/idea"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Size bir eser adı verilecek.Bu eserin hangi yazara ait olduğunu bilmeye çalışacaksınız ve bunu yapmanız için 10 saniyeniz olacak.İstediğiniz soruyu kaydedip daha sonra profil kısmında tekrardan inceleyebilirsiniz."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:padding="@dimen/_5sdp"/>
+
+        <LinearLayout
+            android:id="@+id/gostermeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <CheckBox
+                android:id="@+id/gosterme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bunu bir daha gösterme"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/okey"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:text="Tamam"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@color/loginTextBackground"
+            app:backgroundTint="@null"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+    </LinearLayout>
+</LinearLayout>

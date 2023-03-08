@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grapht"
+    app:startDestination="@id/loginFragment2">
+
+    <fragment
+        android:id="@+id/gameFragment2"
+        android:name="com.example.cepedebiyat.view.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment2_to_siralamaFragment"
+            app:destination="@id/siralamaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.cepedebiyat.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment2_to_gameFragment2"
+            app:destination="@id/gameFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.cepedebiyat.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="state"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/siralamaFragment"
+        android:name="com.example.cepedebiyat.view.SiralamaFragment"
+        android:label="fragment_siralama"
+        tools:layout="@layout/fragment_siralama" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.cepedebiyat.view.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
+    <fragment
+        android:id="@+id/profilFragment2"
+        android:name="com.example.cepedebiyat.view.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment2_to_profilDuzenleFragment"
+            app:destination="@id/profilDuzenleFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profilFragment2_to_saveFragment"
+            app:destination="@id/saveFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profilFragment2_to_avatarSelectedFragment"
+            app:destination="@id/avatarSelectedFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilDuzenleFragment"
+        android:name="com.example.cepedebiyat.view.ProfilDuzenleFragment"
+        android:label="fragment_profil_duzenle"
+        tools:layout="@layout/fragment_profil_duzenle" >
+        <action
+            android:id="@+id/action_profilDuzenleFragment_to_profilFragment2"
+            app:destination="@id/profilFragment2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveFragment"
+        android:name="com.example.cepedebiyat.view.SaveFragment"
+        android:label="fragment_save"
+        tools:layout="@layout/fragment_save" >
+        <action
+            android:id="@+id/action_saveFragment_to_saveDetayFragment"
+            app:destination="@id/saveDetayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveDetayFragment"
+        android:name="com.example.cepedebiyat.view.SaveDetayFragment"
+        android:label="fragment_save_detay"
+        tools:layout="@layout/fragment_save_detay" >
+        <argument android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="state"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/avatarSelectedFragment"
+        android:name="com.example.cepedebiyat.view.AvatarSelectedFragment"
+        android:label="fragment_avatar_selected"
+        tools:layout="@layout/fragment_avatar_selected" >
+        <action
+            android:id="@+id/action_avatarSelectedFragment_to_profilFragment2"
+            app:destination="@id/profilFragment2" />
+    </fragment>
+</navigation>

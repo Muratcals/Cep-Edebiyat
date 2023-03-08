@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.LoginFragment"
+    android:background="@color/loginBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/giris_yap_shape"
+            android:gravity="center"
+            android:text="GİRİŞ YAP"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/login_text_shape"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/loginAuthName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/login_textbox_shape"
+                android:hint="Kullanıcı Adı"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/login_textbox_shape"
+                android:hint="Şifre"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/resetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="Şifremi Unuttum"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/login_button_shape"
+                    android:text="Giriş"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/_10sdp"/>
+
+                <Button
+                    android:id="@+id/registerButton"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/login_button_shape"
+                    android:text="Kayıt Ol"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Or"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/loginProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

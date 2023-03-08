@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/gameFragment2" android:title="AnaSayfa" android:icon="@drawable/home2" android:layout_marginTop="@dimen/_8sdp" android:iconTint="@color/white" />
+    <item android:id="@+id/siralamaFragment" android:title="Sıralamalar" android:icon="@drawable/trophy2" android:layout_marginTop="@dimen/_8sdp"/>
+    <item android:id="@+id/profilFragment2" android:title="Profil" android:icon="@drawable/user2" android:layout_marginTop="@dimen/_8sdp"/>
+</menu>
